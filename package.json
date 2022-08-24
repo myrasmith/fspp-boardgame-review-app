@@ -1,0 +1,17 @@
+{
+  "name": "fspp-boardgame-review-app",
+  "version": "1.0.0",
+  "description": "fullstack board game review app",
+  "main": "back-end/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "board",
+    "game",
+    "boardgame",
+    "review"
+  ],
+  "author": "Myra Fowlkes Smith",
+  "license": "ISC"
+}
