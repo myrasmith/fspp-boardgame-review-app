@@ -5,11 +5,17 @@ const devConnection = {
   user: process.env.DB_USER,
 };
 
-// TODO: create prod connection object
-const prodConnection = {};
+const prodConnection = {
+  connectionString: process.env.DATABASE_URL,
+  max: 30,
+  ssl: {
+    rejectUnauthorized: false,
+  },
+};
+
 const pgp = require("pg-promise")();
 
 // TODO: write logic to check if we are in dev or prod environment, pass corresponding connection object
-const db = pgp(devConnection);
+const db = pgp(process.env.DATABASE_URL ? prodConnection : devConnection);
 
 module.exports = db;
